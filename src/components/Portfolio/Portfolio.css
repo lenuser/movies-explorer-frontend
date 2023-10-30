@@ -1,20 +1,18 @@
 .portfolio {
   max-width: 1280px;
-  padding: 0 70px 183px;
+  padding: 0 70px 105px;
   margin: 0 auto;
 }
 
 @media screen and (max-width: 768px) {
   .portfolio {
-    max-width: 668px;
-    padding: 0 50px 148px;
+    padding: 0 50px 68px;
   }
 }
 
 @media screen and (max-width: 425px) {
   .portfolio {
-    max-width: 292px;
-    padding: 0 14px 126px;
+    padding: 0 14px 48px;
   }
 }
 

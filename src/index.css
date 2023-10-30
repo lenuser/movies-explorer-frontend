@@ -2,9 +2,11 @@
 @import url(./vendor/fonts/fonts.css);
 
 body {
-  max-width: 1280px;
-  margin: 0 auto;
-  background-color: #202020;
-  font-family: 'Inter', Arial, sans-serif;
-  color: #FFF;
+  margin: 0;
+  background-color: rgba(32, 32, 32, 1);
+  color: rgba(255, 255, 255, 1);
 }
+
+/* * {
+  outline: 1px solid red;
+} */

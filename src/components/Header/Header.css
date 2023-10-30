@@ -6,12 +6,18 @@
   align-items: center;
   background: rgba(32, 32, 32, 1);
   width: 1280px;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 1279px) {
   .header {
     width: 100vw;
   }
+}
+
+.header__logo {
+  width: 38px;
+  height: 38px;
 }
 
 .header__links {
@@ -31,7 +37,7 @@
 .header__button {
   min-height: 32px;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 18px;
   letter-spacing: 0.03em;
   display: flex;
@@ -41,7 +47,7 @@
   text-decoration: none;
 }
 
-.header__button_active {
+.header__button-active {
   font-weight: 500;
   font-size: 13px;
   line-height: 18px;
@@ -58,7 +64,7 @@
   opacity: 0.6;
 }
 
-.header__dark {
+.header_dark {
   background: #202020;
 }
 

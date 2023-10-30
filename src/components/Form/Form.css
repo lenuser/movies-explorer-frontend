@@ -1,4 +1,4 @@
-.form__container {
+.form {
   padding: 70px 0;
   margin: 0 auto;
   display: flex;
@@ -22,9 +22,10 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;
+  margin: 0;
 }
 
-.form {
+.form__form {
   display: flex;
   flex-direction: column;
   min-height: 380px;
@@ -126,9 +127,6 @@
 }
 
 .form__input-text {
-  position: absolute;
-  top: 64px;
-  left: 0;
   margin: 0;
   font-weight: 400;
   font-size: 10px;

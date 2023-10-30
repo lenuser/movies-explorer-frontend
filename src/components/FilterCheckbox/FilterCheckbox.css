@@ -1,19 +1,8 @@
 .filter-checkbox {
   max-width: 1280px;
-  margin: 28px 0 40px;
+  margin: 0 0 40px;
   display: flex;
   justify-content: center;
-}
-
-@media screen and (max-width: 768px) {
-  .filter-checkbox {
-    margin: 40px 0;
-  }
-}
-@media screen and (max-width: 425px) {
-  .filter-checkbox {
-    margin: 44px 0 40px;
-  }
 }
 
 .filter-checkbox__container {
@@ -48,7 +37,7 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  content: "";
+  content: '';
   bottom: 2.5px;
   left: 3px;
   transition: 0.4s;
