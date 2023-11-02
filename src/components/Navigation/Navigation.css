@@ -1,9 +1,9 @@
-.navigation {
+.header__navigation {
   display: none;
 }
 
 @media screen and (max-width: 1023px) {
-  .navigation {
+  .header__navigation {
     display: flex;
     position: fixed;
     width: 100%;
@@ -14,7 +14,7 @@
     justify-content: space-between;
   }
 
-  .navigation__menu {
+  .header__navigation-menu {
     box-sizing: border-box;
     padding: 159px 90px 90px 90px;
     width: 520px;
@@ -27,14 +27,14 @@
     align-items: center;
   }
 
-  .navigation__container {
+  .header__navigation-container {
     flex: 1 1 auto;
   }
 
-  .navigation__close-button {
+  .header__navigation-close-button {
     position: absolute;
-    top: 22px;
-    right: 22px;
+    top: 26px;
+    right: 26px;
     background-image: url(../../images/icon-menu-close.svg);
     width: 22px;
     height: 22px;
@@ -46,18 +46,18 @@
     cursor: pointer;
   }
 
-  .navigation__close-button:hover {
+  .header__navigation-close-button:hover {
     opacity: 0.6;
   }
 
-  .navigation__links {
+  .header__navigation-links {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 22px;
+    gap: 12px;
   }
 
-  .navigation__link {
+  .header__navigation-link {
     text-decoration: none;
     font-weight: 500;
     font-size: 18px;
@@ -68,15 +68,23 @@
     border-bottom: 2px solid transparent;
   }
 
-  .navigation__link_active {
+  .header__navigation-link:first-child {
+    margin-bottom: 20px;
+  }
+
+  .header__navigation-link:last-child {
+    margin-top: 16px;
+  }
+
+  .header__navigation-link_active {
     color: #ff6838;
   }
 
-  .navigation__link:hover {
+  .header__navigation-link:hover {
     border-bottom: 2px solid #fff;
   }
 
-  .navigation__account-button {
+  .header__navigation-account-button {
     width: 100px;
     min-height: 32px;
     background-color: rgba(49, 49, 49, 1);
@@ -91,22 +99,31 @@
     padding-top: 8px;
   }
 
-  .navigation__account-button:hover {
+  .header__navigation-account-button:hover {
     opacity: 0.6;
   }
 }
 
 @media screen and (max-width: 576px) {
-  .navigation__menu {
+  .header__navigation-menu {
     padding: 144px 10px 46px 10px;
     width: 100%;
   }
 
-  .navigation__container {
+  .header__navigation-container {
     display: none;
   }
 
-  .navigation__links {
-    gap: 15px;
+  .header__navigation-links {
+    gap: 8px;
+  }
+
+  .header__navigation-close-button {
+    top: 20px;
+    right: 18px;
+  }
+
+  .header__navigation-account-button {
+    margin-bottom: 68px;
   }
 }

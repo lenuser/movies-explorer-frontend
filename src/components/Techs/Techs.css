@@ -1,25 +1,24 @@
 .techs {
+  width: 100%;
   background-color: #272727;
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 100px 70px;
+  padding: 100px 30px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1224px) {
   .techs {
     padding: 90px 50px;
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 715px) {
   .techs {
     background-color: transparent;
-    padding: 78px 18px;
+    padding: 70px 18px;
   }
 }
 
 .techs__title {
-  margin: 0 auto;
   padding-bottom: 26px;
   font-size: 22px;
   font-weight: 400;
@@ -28,7 +27,7 @@
   border-bottom: 1px solid rgba(218, 218, 218, 1);
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 715px) {
   .techs__title {
     padding-bottom: 26px;
     font-size: 18px;
@@ -46,13 +45,13 @@
   letter-spacing: -2px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1224px) {
   .techs__heading {
     margin-top: 80px;
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 715px) {
   .techs__heading {
     margin-top: 61px;
     font-size: 30px;
@@ -71,7 +70,7 @@
   letter-spacing: -0.56px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1224px) {
   .techs__subtitle {
     margin-top: 23px;
     font-size: 12px;
@@ -80,7 +79,7 @@
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 715px) {
   .techs__subtitle {
     margin-top: 24px;
     font-size: 11px;
@@ -104,7 +103,7 @@
   line-height: normal;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1224px) {
   .techs__list {
     margin-top: 83px;
     gap: 10px;
@@ -113,7 +112,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 715px) {
   .techs__list {
     max-width: 178px;
     display: grid;
@@ -138,7 +137,7 @@
   padding-top: 21px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1224px) {
   .techs__list-item {
     width: 84px;
     height: 57px;

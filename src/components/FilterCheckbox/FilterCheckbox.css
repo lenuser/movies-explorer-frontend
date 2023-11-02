@@ -1,6 +1,6 @@
 .filter-checkbox {
   max-width: 1280px;
-  margin: 0 0 40px;
+  margin: 0 auto 40px;
   display: flex;
   justify-content: center;
 }

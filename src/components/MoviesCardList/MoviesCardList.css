@@ -2,6 +2,9 @@
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1280px;
   height: 100%;
 }
 
@@ -54,7 +57,7 @@
   }
 
   .cards__button-container {
-    margin-top: 117px;
+    margin-top: 76px;
     margin-bottom: 81px;
   }
 }
@@ -74,6 +77,6 @@
   }
 
   .cards__button-container {
-    margin: 70px 0 80px;
+    margin: 36px 0 80px;
   }
 }

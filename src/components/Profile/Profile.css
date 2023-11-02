@@ -3,7 +3,8 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  max-width: 410px;
+  /* max-width: 410px; */
+  width: 32%;
   box-sizing: border-box;
 }
 
@@ -105,7 +106,8 @@
 
 @media screen and (max-width: 1023px) {
   .profile {
-    padding-top: 236px;
+    width: 53.4%;
+    padding-top: 232px;
     padding-bottom: 269px;
   }
 
@@ -121,7 +123,9 @@
 
 @media screen and (max-width: 576px) {
   .profile {
-    padding: 70px 30px 40px 30px;
+    width: 81%;
+    padding-top: 66px;
+    padding-bottom: 30px;
   }
 
   .profile__welcome {
