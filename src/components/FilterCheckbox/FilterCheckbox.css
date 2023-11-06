@@ -32,6 +32,10 @@
   transition: 0.4s;
 }
 
+.filter-checkbox__slider:hover {
+  opacity: 0.7;
+}
+
 .filter-checkbox__slider:before {
   background-color: rgba(160, 160, 160, 1);
   position: absolute;

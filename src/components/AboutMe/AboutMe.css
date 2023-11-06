@@ -1,7 +1,8 @@
 .about-me {
+  width: 95%;
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 110px 30px 100px;
+  padding: 110px 0 100px;
 }
 
 .about-me__title {
@@ -17,7 +18,7 @@
 .about-me__container {
   display: flex;
   justify-content: space-between;
-  margin-top: 63px;
+  margin-top: 64px;
 }
 
 .about-me__description-block {
@@ -73,15 +74,11 @@
   border-radius: 10px;
 }
 
-/* @media screen and (max-width: 1200px) {
-  .about-me {
-    padding: 110px 70px 100px;
-  }
-} */
-
 @media screen and (max-width: 1224px) {
   .about-me {
-    padding: 90px 50px;
+    width: 92%;
+    padding: 90px 0;
+    /* margin: 90px 0; */
   }
 
   .about-me__description-block {
@@ -118,12 +115,14 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 715px) {
   .about-me {
-    padding: 66px 14px 70px;
+    width: 100%;
+    padding: 70px 0;
+    /* margin: 70px 0 70px; */
   }
   .about-me__container {
-    margin-top: 60px;
+    margin-top: 58px;
     flex-direction: column-reverse;
     align-items: center;
   }
@@ -131,7 +130,7 @@
     margin-right: 0px;
   }
   .about-me__title {
-    padding-bottom: 28px;
+    padding-bottom: 26px;
     font-size: 18px;
     line-height: 22px;
   }
@@ -141,7 +140,7 @@
     line-height: 36px;
   }
   .about-me__job {
-    margin-top: 18px;
+    margin-top: 20px;
     font-size: 11px;
     line-height: 16px;
   }

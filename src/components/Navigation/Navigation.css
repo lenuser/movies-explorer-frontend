@@ -54,7 +54,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
   }
 
   .header__navigation-link {
@@ -73,7 +73,7 @@
   }
 
   .header__navigation-link:last-child {
-    margin-top: 16px;
+    margin-top: 14px;
   }
 
   .header__navigation-link_active {
@@ -115,15 +115,20 @@
   }
 
   .header__navigation-links {
-    gap: 8px;
+    gap: 5px;
   }
 
   .header__navigation-close-button {
-    top: 20px;
+    top: 18px;
     right: 18px;
   }
 
   .header__navigation-account-button {
-    margin-bottom: 68px;
+    min-height: 30px;
+    padding-top: 9px;
   }
+
+  /* .header__navigation-link:last-child {
+    margin-top: 14px;
+  } */
 }

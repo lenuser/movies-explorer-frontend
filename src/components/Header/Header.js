@@ -38,7 +38,7 @@ function Header() {
           <Link to='/' className='header__logo'>
             <img src={headerLogo} alt='Логотип' />
           </Link>
-          <nav className='header__links'>
+          <nav className='header__links-guest'>
             <Link to='/signup' className='header__button'>
               Регистрация
             </Link>
@@ -53,23 +53,25 @@ function Header() {
           <Link to='/' className='header__logo'>
             <img src={headerLogo} alt='Логотип' />
           </Link>
-          <div className='header__links header__links_films'>
-            <NavLink to='/movies' className={activeColorLink}>
-              Фильмы
-            </NavLink>
+          <div className='header__links-users'>
+            <div className='header__links-films'>
+              <NavLink to='/movies' className={activeColorLink}>
+                Фильмы
+              </NavLink>
 
-            <NavLink to='/saved-movies' className={activeColorLink}>
-              Сохранённые фильмы
-            </NavLink>
+              <NavLink to='/saved-movies' className={activeColorLink}>
+                Сохранённые фильмы
+              </NavLink>
+            </div>
+            <nav className='header__links-profile'>
+              <Link to='/profile' className='header__account-btn'>
+                Аккаунт
+              </Link>
+              <button type='button' className='header__mobile-btn' onClick={handleOpenMobileMenu}>
+                <img src={mobileMenu} alt='Кнопка мобильного меню' />
+              </button>
+            </nav>
           </div>
-          <nav className='header__links'>
-            <Link to='/profile' className='header__account-btn'>
-              Аккаунт
-            </Link>
-            <button type='button' className='header__mobile-btn' onClick={handleOpenMobileMenu}>
-              <img src={mobileMenu} alt='Кнопка мобильного меню' />
-            </button>
-          </nav>
 
           {isClicked ? <Navigation handleCloseMobileMenu={handleCloseMobileMenu} /> : ''}
         </header>

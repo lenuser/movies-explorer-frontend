@@ -3,16 +3,12 @@ import deleteButton from '../../images/icon-close.svg';
 import img from '../../images/movie1.jpg';
 import './MoviesCard.css';
 
-const MoviesCard = () => {
+const MoviesCard = ({ movieName }) => {
   return (
     <>
       <li className='card'>
         <div className='card__wrapper'>
-          <img
-            className='card__image'
-            alt='Тут в функциональности будет подтягиваться инд. alt'
-            src={img}
-          />
+          <img className='card__image' alt='{movieName}=33 слова о дизайне' src={img} />
 
           <button type='button' className='card__like-button card__like-active'></button>
 

@@ -1,20 +1,22 @@
 .techs {
-  width: 100%;
+  width: 95%;
   background-color: #272727;
   margin: 0 auto;
-  padding: 100px 30px;
+  padding: 100px 0;
 }
 
 @media screen and (max-width: 1224px) {
   .techs {
-    padding: 90px 50px;
+    width: 92%;
+    padding: 90px 0;
   }
 }
 
 @media screen and (max-width: 715px) {
   .techs {
+    width: 97%;
+    padding: 70px 0;
     background-color: transparent;
-    padding: 70px 18px;
   }
 }
 
@@ -29,7 +31,7 @@
 
 @media screen and (max-width: 715px) {
   .techs__title {
-    padding-bottom: 26px;
+    padding-bottom: 24px;
     font-size: 18px;
     letter-spacing: -0.72px;
     border-bottom: 1px solid rgba(0, 0, 0, 1);

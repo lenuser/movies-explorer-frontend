@@ -1,12 +1,4 @@
 .header {
-  /* position: relative;
-  padding: 0 70px;
-  min-height: 74px;
-  display: flex;
-  align-items: center;
-  background: rgba(32, 32, 32, 1);
-  width: 1280px;
-  margin: 0 auto; */
   width: 89%;
   margin: 0 auto;
   padding: 18px 0 18px 0;
@@ -15,29 +7,16 @@
   background: rgba(32, 32, 32, 1);
 }
 
-@media screen and (max-width: 1224px) {
-  .header {
-    width: 92%;
-  }
-}
-
 .header__logo {
   width: 38px;
   height: 38px;
 }
 
-.header__links {
+.header__links-guest {
   margin-left: auto;
   display: flex;
   gap: 30px;
   align-items: center;
-}
-
-.header__links_films {
-  display: flex;
-  gap: 21px;
-  position: absolute;
-  left: 42%;
 }
 
 .header__button {
@@ -72,6 +51,8 @@
 
 .header_dark {
   background: #202020;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header__button-green {
@@ -79,6 +60,19 @@
   background-color: #3ddc84;
   min-width: 76px;
   border-radius: 3px;
+}
+
+/**/
+
+.header__links-users {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+}
+
+.header__links-films {
+  display: flex;
+  gap: 21px;
 }
 
 .header__account-btn {
@@ -124,8 +118,24 @@
   opacity: 0.6;
 }
 
+@media screen and (max-width: 1224px) {
+  .header {
+    width: 92%;
+  }
+
+  .header__account-btn {
+    margin-left: 190px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .header__account-btn {
+    margin-left: 160px;
+  }
+}
+
 @media screen and (max-width: 768px) {
-  .header__links_films {
+  .header__links-films {
     display: none;
   }
 
@@ -139,11 +149,7 @@
 }
 
 @media screen and (max-width: 576px) {
-  .header {
-    padding: 0 14px;
-  }
-
-  .header__links {
+  .header__links-guest {
     gap: 14px;
   }
 

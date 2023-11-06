@@ -4,13 +4,16 @@ import './Navigation.css';
 
 function Navigation({ handleCloseMobileMenu }) {
   const activeColorLink = ({ isActive }) =>
-    isActive ? 'header__navigation-link_active' : 'header__navigation-link';
+    isActive ? 'header__navigation-link header__navigation-link_active' : 'header__navigation-link';
 
   return (
     <div className='header__navigation'>
       <div className='header__navigation-container'></div>
       <div className='header__navigation-menu'>
-        <button className='header__navigation-close-button' onClick={handleCloseMobileMenu}></button>
+        <button
+          className='header__navigation-close-button'
+          onClick={handleCloseMobileMenu}
+        ></button>
         <nav className='header__navigation-links'>
           <NavLink to='/' className={activeColorLink}>
             Главная
@@ -23,7 +26,11 @@ function Navigation({ handleCloseMobileMenu }) {
           </NavLink>
         </nav>
 
-        <Link to='/profile' className='header__navigation-account-button' onClick={handleCloseMobileMenu}>
+        <Link
+          to='/profile'
+          className='header__navigation-account-button'
+          onClick={handleCloseMobileMenu}
+        >
           Аккаунт
         </Link>
       </div>
