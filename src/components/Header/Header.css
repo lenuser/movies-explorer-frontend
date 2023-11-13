@@ -1,5 +1,5 @@
 .header {
-  width: 89%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 18px 0 18px 0;
   display: flex;
@@ -50,6 +50,7 @@
 }
 
 .header_dark {
+  width: 100%;
   background: #202020;
   display: flex;
   justify-content: space-between;

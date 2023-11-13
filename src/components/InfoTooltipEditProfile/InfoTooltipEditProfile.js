@@ -1,7 +1,7 @@
 import React from "react"
 import "../InfoTooltip/InfoTooltip.css"
 
-function InfoToolTipUpdate(props) {
+function InfoTooltipEditProfile(props) {
   return (
     <div
       className={`popup popup_type_tooltip ${
@@ -13,7 +13,7 @@ function InfoToolTipUpdate(props) {
         {props.isUpdate ? (
           <>
             <p className="popup__signup-title">
-              Успешное редактирование данных!
+              Успешное редактирование профиля!
             </p>
           </>
         ) : (
@@ -34,4 +34,4 @@ function InfoToolTipUpdate(props) {
   )
 }
 
-export default InfoToolTipUpdate
+export default InfoTooltipEditProfile

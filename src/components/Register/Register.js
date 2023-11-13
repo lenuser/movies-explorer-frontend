@@ -1,8 +1,21 @@
 import React from "react";
 import "../Form/Form.css";
 import Form from "../Form/Form";
+import useForm from "../../hooks/useForm";
+import { PATTERN_REGEX_EMAIL } from "../../utils/constants";
 
-function Register() {
+function Register({ isLoading, handleRegisterUser }) {
+  const { enteredValues, errors, handleChangeInput, isFormValid } = useForm();
+
+  function handleUpdateInfo(event) {
+    event.preventDefault();
+    handleRegisterUser({
+      name: enteredValues.name,
+      email: enteredValues.email,
+      password: enteredValues.password,
+    });
+  }
+
   return (
     <Form
       title="Добро пожаловать!"
@@ -10,6 +23,9 @@ function Register() {
       question="Уже зарегистрированы?"
       linkText=" Войти"
       link="/signin"
+      onSubmit={handleUpdateInfo}
+      isDisablBtn={!isFormValid}
+      isLoading={isLoading}
     >
       <label className="form__label">
         Имя
@@ -22,8 +38,10 @@ function Register() {
           maxLength="40"
           required
           placeholder="имя"
+          onChange={handleChangeInput}
+          value={enteredValues.name || ""}
         />
-        <span className="form__input-text"></span>
+        <span className="form__input-text">{errors.name}</span>
       </label>
       <label className="form__label">
         E-mail
@@ -34,8 +52,11 @@ function Register() {
           type="email"
           required
           placeholder="почта"
+          onChange={handleChangeInput}
+          pattern={PATTERN_REGEX_EMAIL}
+          value={enteredValues.email || ""}
         />
-        <span className="form__input-text"></span>
+        <span className="form__input-text">{errors.email}</span>
       </label>
       <label className="form__label">
         Пароль
@@ -48,8 +69,10 @@ function Register() {
           minLength="8"
           maxLength="14"
           placeholder="пароль"
+          onChange={handleChangeInput}
+          value={enteredValues.password || ""}
         />
-        <span className="form__input-text"></span>
+        <span className="form__input-text">{errors.password}</span>
       </label>
     </Form>
   );
