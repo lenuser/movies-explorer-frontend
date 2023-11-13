@@ -8,7 +8,7 @@ https://github.com/lenuser/movies-explorer-frontend
 
 ## Ссылка на рullrequest
 
-
+https://github.com/lenuser/movies-explorer-frontend/pull/2
 
 ## Ссылки 
 
