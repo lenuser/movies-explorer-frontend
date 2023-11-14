@@ -1,0 +1,134 @@
+.header__navigation {
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .header__navigation {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 5;
+    justify-content: space-between;
+  }
+
+  .header__navigation-menu {
+    box-sizing: border-box;
+    padding: 159px 90px 90px 90px;
+    width: 520px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #202020;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+  }
+
+  .header__navigation-container {
+    flex: 1 1 auto;
+  }
+
+  .header__navigation-close-button {
+    position: absolute;
+    top: 26px;
+    right: 26px;
+    background-image: url(../../images/icon-menu-close.svg);
+    width: 22px;
+    height: 22px;
+    border: none;
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .header__navigation-close-button:hover {
+    opacity: 0.6;
+  }
+
+  .header__navigation-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .header__navigation-link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #fff;
+    width: max-content;
+    border-bottom: 2px solid transparent;
+  }
+
+  .header__navigation-link:first-child {
+    margin-bottom: 20px;
+  }
+
+  .header__navigation-link:last-child {
+    margin-top: 14px;
+  }
+
+  .header__navigation-link_active {
+    color: #ff6838;
+  }
+
+  .header__navigation-link:hover {
+    border-bottom: 2px solid #fff;
+  }
+
+  .header__navigation-account-button {
+    width: 100px;
+    min-height: 32px;
+    background-color: rgba(49, 49, 49, 1);
+    border-radius: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+  }
+
+  .header__navigation-account-button:hover {
+    opacity: 0.6;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header__navigation-menu {
+    padding: 144px 10px 46px 10px;
+    width: 100%;
+  }
+
+  .header__navigation-container {
+    display: none;
+  }
+
+  .header__navigation-links {
+    gap: 5px;
+  }
+
+  .header__navigation-close-button {
+    top: 18px;
+    right: 18px;
+  }
+
+  .header__navigation-account-button {
+    min-height: 30px;
+    padding-top: 9px;
+  }
+
+  /* .header__navigation-link:last-child {
+    margin-top: 14px;
+  } */
+}

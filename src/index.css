@@ -1,0 +1,12 @@
+@import url(./vendor/normalize.css);
+@import url(./vendor/fonts/fonts.css);
+
+body {
+  margin: 0;
+  background-color: rgba(32, 32, 32, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+/* {
+  outline: 1px solid red;
+}*/

@@ -1,0 +1,19 @@
+.main {
+  width: 94%;
+  max-width: 1200px;
+  min-width: 292px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media screen and (max-width: 1224px) {
+  .main {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 715px) {
+  .main {
+    width: 91%;
+  }
+}
