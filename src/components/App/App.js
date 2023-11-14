@@ -79,6 +79,7 @@ function App() {
 
   // Регистр
   function handleRegisterUser({ name, email, password }) {
+    setIsLoading(true)
     api
       .register(name, email, password)
       .then(() => {
@@ -90,7 +91,10 @@ function App() {
         setInfoToolTipPopupOpen(true);
         setIsSuccess(false);
         console.log(error);
-      });
+      })
+      .finally(() => {
+        setIsLoading(false)
+      })
   }
 
   // Логин
@@ -117,7 +121,7 @@ function App() {
       });
   }
 
- 
+
 
   // лайк
   function handleLike(card) {

@@ -66,13 +66,14 @@
   position: absolute;
   top: 14px;
   right: 14px;
-  background-image: url(../../images/icon-saved.svg);
+ /* background-image: url(../../images/icon-saved.svg);*/
   background-repeat: no-repeat;
   background-color: transparent;
   border: none;
 }
 
 .card__like-button:hover {
+  background-image: url(../../images/icon-saved.svg);
   opacity: 0.6;
   cursor: pointer;
 }
@@ -84,13 +85,21 @@
 
 .card__like-delete {
   width: 21px;
+  height: 21px;
   background: transparent;
   border: none;
   position: absolute;
-  top: 8px;
-  right: 6px;
+  top: 18px;
+  right: 14px;
   cursor: pointer;
+ 
 }
+
+
+.card__like-delete:hover {
+  background-image: url(../../images/icon-close.svg);
+}
+
 
 @media screen and (max-width: 1023px) {
   .card {

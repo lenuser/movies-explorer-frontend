@@ -22,7 +22,7 @@ function Login({ onAuthorization, isLoading }) {
       question="Еще не зарегистрированы?"
       linkText=" Регистрация"
       link="/signup"
-      isDisablBtn={!isFormValid}
+      isDisabled={!isFormValid}
       isLoading={isLoading}
       onSubmit={handleUpdateInfo}
       noValidate

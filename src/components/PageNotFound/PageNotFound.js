@@ -1,16 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "./PageNotFound.css";
 
 function PageNotFound() {
+  const pathNav = useNavigate()
+
+  function navigatePath() {
+    pathNav(-3)
+  }
+
   return (
     <main className="not-found">
       <span className="not-found__title">404</span>
       <p className="not-found__subtitle">Страница не найдена</p>
-      <Link className="button button_type_to-main" to="/">
+      <button className="button button_type_to-main" onClick={navigatePath}>
         Назад
-      </Link>
+      </button>
     </main>
   );
 }

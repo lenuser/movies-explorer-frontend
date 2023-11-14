@@ -53,11 +53,11 @@ const MoviesCard = ({
               className="card__like-delete"
               onClick={onDelete}
             >
-              <img
+             {/*  <img
                 className="card__like-delete"
                 src={deleteButton}
                 alt="удалить"
-              />
+              /> */}
             </button>
           ) : (
             <button

@@ -24,7 +24,7 @@ function Register({ isLoading, handleRegisterUser }) {
       linkText=" Войти"
       link="/signin"
       onSubmit={handleUpdateInfo}
-      isDisablBtn={!isFormValid}
+      isDisabled={!isFormValid}
       isLoading={isLoading}
     >
       <label className="form__label">

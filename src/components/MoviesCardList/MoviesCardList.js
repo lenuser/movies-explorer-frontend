@@ -8,6 +8,11 @@ import {
   NUMBER_MOVIES_DESKTOP,
   NUMBER_MOVIES_TABLET,
   NUMBER_MOVIES_MOBIL,
+  NUMBER_MOVIES_DESKTOP_DISPLAY,
+  NUMBER_MOVIES_TABLET_DISPLAY,
+  NUMBER_MOVIE_XL,
+  NUMBER_MOVIE_L,
+  NUMBER_MOVIE_M
 } from "../../utils/constants";
 
 function MoviesCardList({
@@ -25,12 +30,12 @@ function MoviesCardList({
   // Количество карточек с фильмами
   function handleShowMoviePlazma() {
     const display = window.innerWidth;
-    if (display > 1180) {
-      setShownMovies(12);
-    } else if (display > 767) {
-      setShownMovies(8);
+    if (display > NUMBER_MOVIES_DESKTOP_DISPLAY) {
+      setShownMovies(NUMBER_MOVIE_XL);
+    } else if (display > NUMBER_MOVIES_TABLET_DISPLAY) {
+      setShownMovies(NUMBER_MOVIE_L);
     } else {
-      setShownMovies(5);
+      setShownMovies(NUMBER_MOVIE_M);
     }
   }
 
@@ -42,9 +47,9 @@ function MoviesCardList({
   // Количество отображаемых карточек, при клике на Ещё
   function handleShownMoviesButtonMore() {
     const display = window.innerWidth;
-    if (display > 1180) {
+    if (display > NUMBER_MOVIES_DESKTOP_DISPLAY) {
       setShownMovies(shownMovies + NUMBER_MOVIES_DESKTOP);
-    } else if (display > 767) {
+    } else if (display > NUMBER_MOVIES_TABLET_DISPLAY) {
       setShownMovies(shownMovies + NUMBER_MOVIES_TABLET);
     } else {
       setShownMovies(shownMovies + NUMBER_MOVIES_MOBIL);
@@ -57,10 +62,24 @@ function MoviesCardList({
   }
 
   useEffect(() => {
-    setTimeout(() => {
-      window.addEventListener("resize", handleShowMoviePlazma);
-    }, 500);
-  });
+    let resizeWidthTimeout
+
+    function handleResize() {
+      clearTimeout(resizeWidthTimeout)
+      resizeWidthTimeout = setTimeout(() => {
+        handleShowMoviePlazma()
+      }, 500)
+    }
+    // Вызов при монтировании компонента
+    handleShowMoviePlazma()
+
+    window.addEventListener("resize", handleResize)
+
+    return () => {
+      clearTimeout(resizeWidthTimeout)
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [])
 
   const { pathname } = useLocation();
 
